@@ -1,0 +1,116 @@
+@import "_variables";
+
+.quienSoy{
+    border: 1px solid black;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 30px;
+    justify-content: $centro;
+    background-color: #38beea38;
+
+    &__titulo{
+        margin: 10px 0px 40px 0px;
+        font-size: 50px;
+        text-align: $centro;
+    }
+    &__fotoTexto{
+        display: flex;
+        flex-direction: row;
+        justify-content: $centro;
+        &__texto{
+            width: 100%;
+            text-align: $centro;
+            margin: 30px 20px;
+            font-weight: bolder;
+        }
+        &__foto{
+            width: 550px;
+            height: 350px;
+        }
+    }
+
+}
+
+.destinoBloques{
+    margin:20px 0px;
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+
+    &__contenido{
+        position: relative;
+        z-index: 2; 
+    }
+
+    &__foto img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5; 
+    }
+}
+
+.tituloFotoGaleria{
+    margin: 20px 0px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+
+    h1{
+        font-family: 'Quicksand', sans-serif;
+        text-align: $centro;
+        color: white;
+        font-weight: bolder;
+        font-size: 100px;
+        text-decoration: underline;
+        width: 100%;
+        margin-top: 100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7; 
+        }
+}
+
+.experienciaUno__texto{
+        font-size: 18px;
+        width: 80%;
+        text-align: $centro;
+}
+
+
+
+.experienciaDos__texto{
+    @extend .experienciaUno__texto;
+    text-align: right;
+}
+
+.experienciaTres__texto{
+    @extend .experienciaUno__texto;
+    text-align: left;
+}
+
+@mixin titulos($tamanio, $grosor, $alineado, $fuente, $color){
+    font-size: $tamanio;
+    font-weight: $grosor;
+    align-self: $alineado;
+    font-family: $fuente;
+    color: $color;
+}
+
+#tituloEncabezado{
+    @include titulos(100px, ligther, end, 'Ephesis', white)
+}
+
+#subtituloEncabezado{
+    @include titulos(100px, ligther, end, 'Ephesis', white)
+}

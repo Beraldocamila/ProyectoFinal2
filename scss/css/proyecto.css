@@ -1,0 +1,88 @@
+.quienSoy {
+  border: 1px solid black;
+  margin: 40px;
+  padding: 40px;
+  border-radius: 30px;
+  justify-content: center;
+  background-color: #38beea38; }
+  .quienSoy__titulo {
+    margin: 10px 0px 40px 0px;
+    font-size: 50px;
+    text-align: center; }
+  .quienSoy__fotoTexto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .quienSoy__fotoTexto__texto {
+      width: 100%;
+      text-align: center;
+      margin: 30px 20px;
+      font-weight: bolder; }
+    .quienSoy__fotoTexto__foto {
+      width: 550px;
+      height: 350px; }
+
+.destinoBloques {
+  margin: 20px 0px;
+  position: relative;
+  overflow: hidden;
+  height: 800px; }
+  .destinoBloques__contenido {
+    position: relative;
+    z-index: 2; }
+  .destinoBloques__foto img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; }
+
+.tituloFotoGaleria {
+  margin: 20px 0px;
+  position: relative;
+  overflow: hidden;
+  height: 300px; }
+  .tituloFotoGaleria h1 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 100px;
+    text-decoration: underline;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    z-index: 2; }
+  .tituloFotoGaleria img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; }
+
+.experienciaUno__texto, .experienciaDos__texto, .experienciaTres__texto {
+  font-size: 18px;
+  width: 80%;
+  text-align: center; }
+
+.experienciaDos__texto {
+  text-align: right; }
+
+.experienciaTres__texto {
+  text-align: left; }
+
+#tituloEncabezado {
+  font-size: 100px;
+  font-weight: ligther;
+  align-self: end;
+  font-family: "Ephesis";
+  color: white; }
+
+#subtituloEncabezado {
+  font-size: 100px;
+  font-weight: ligther;
+  align-self: end;
+  font-family: "Ephesis";
+  color: white; }
