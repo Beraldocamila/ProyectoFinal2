@@ -175,16 +175,16 @@ ul li:hover ul {
   flex-direction: column;
   flex-wrap: nowrap; }
   #index #indexTitulo {
-    height: 250px; }
+    height: 250px;
+    text-align: center; }
     #index #indexTitulo h1, #index #indexTitulo .experienciaCompartida h2, .experienciaCompartida #index #indexTitulo h2, #index #indexTitulo .mainMusica h2, .mainMusica #index #indexTitulo h2, #index #indexTitulo .mainMusica h3, .mainMusica #index #indexTitulo h3 {
-      margin: 70px;
+      margin-top: 60px;
       height: 40px;
-      text-align: center;
-      display: block;
+      display: inline-block;
       color: #38beea;
       font-size: 50px;
       font-weight: bolder;
-      width: 80%; }
+      width: 70%; }
   #index section {
     height: auto; }
 

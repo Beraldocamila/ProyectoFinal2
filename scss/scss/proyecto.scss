@@ -236,15 +236,15 @@ ul li:hover ul {
     flex-wrap: nowrap;
     #indexTitulo{
         height: 250px;
-        h1{
-        margin: 70px;
-        height: 40px;
         text-align: $centro;
-        display: block;
+        h1{
+        margin-top: 60px;
+        height: 40px;
+        display: inline-block;
         color: #38beea;
         font-size: 50px;
         font-weight: bolder;
-        width: 80%;
+        width: 70%;
         }   
     }
     section{
