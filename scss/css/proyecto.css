@@ -1,3 +1,248 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+/* Igual en todas las paginas */
+p, h1, .experienciaCompartida h2, .mainMusica h2, .mainMusica h3, h3 {
+  font-family: "Quicksand", sans-serif; }
+
+.grillaPrincipal {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer"; }
+
+header {
+  grid-area: header;
+  height: 600px; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer;
+  background-color: #ffb414;
+  height: 50px; }
+
+/* HEADER INDEX (LOGO + TITULO + SUBTITULO + NAV */
+.grillasUno {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 30% 30% 40%;
+  grid-template-areas: "logo  titulo" "logo  subtitulo" "nav   nav";
+  position: relative;
+  z-index: 2;
+  height: 600px; }
+  .grillasUno .container-fluid {
+    grid-area: nav;
+    align-self: end; }
+    .grillasUno .container-fluid .listaNav {
+      grid-area: nav;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      height: 50px;
+      height: auto;
+      z-index: 2; }
+
+ul ul {
+  position: absolute;
+  display: none;
+  z-index: 3; }
+  ul ul li {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.405); }
+
+ul li:hover ul {
+  display: block; }
+
+.nav-link {
+  color: white;
+  font-weight: bolder; }
+
+.nav-link:hover {
+  color: #ffb414; }
+
+.nav-item {
+  border-left: 1px solid white; }
+
+#imagenHeader {
+  /* IMAGEN FONDO HEADER INDEX */
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 600px; }
+
+#tituloEncabezado {
+  font-size: 100px;
+  font-weight: ligther;
+  align-self: end;
+  font-family: "Ephesis", cursive;
+  color: white;
+  justify-self: start;
+  position: relative;
+  z-index: 2;
+  grid-area: titulo; }
+
+#subtituloEncabezado {
+  font-size: 100px;
+  font-weight: ligther;
+  align-self: start;
+  font-family: "Ephesis", cursive;
+  color: white;
+  justify-self: start;
+  position: relative;
+  z-index: 2;
+  grid-area: subtitulo;
+  border-top: 2px solid white;
+  letter-spacing: 5px; }
+
+#logo {
+  grid-area: logo;
+  position: relative;
+  z-index: 2;
+  padding: 20px; }
+
+/* HEADER EN LAS OTRAS PAGINAS (TITULO + SUBTITULO + NAV) - DESTINO / GALERIA / EXPERIENCIAS */
+.headerDistinto, .headerMusica {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #38beea; }
+  .headerDistinto .tituloEncabezadoDistinto, .headerMusica .tituloEncabezadoDistinto, .headerMusica .tituloEncabezadoMusica {
+    width: 40%;
+    margin-left: 60px;
+    font-size: 70px;
+    font-weight: lighter;
+    word-spacing: 10px;
+    font-family: "Ephesis", cursive;
+    color: white; }
+  .headerDistinto nav, .headerMusica nav {
+    align-self: flex-end; }
+    .headerDistinto nav .listaNavDistinta, .headerMusica nav .listaNavDistinta, .headerMusica nav .listaNavMusica {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      list-style-type: none;
+      text-decoration: none;
+      height: 40px; }
+      .headerDistinto nav .listaNavDistinta ul li, .headerMusica nav .listaNavDistinta ul li, .headerMusica nav .listaNavMusica ul li {
+        display: block;
+        background-color: #38beea; }
+
+/* HEADER EN LAS OTRAS PAGINAS (TITULO + SUBTITULO + NAV) - MUSICA */
+.headerMusica {
+  background-color: #1ed760; }
+  .headerMusica .tituloEncabezadoMusica {
+    color: black; }
+  .headerMusica nav {
+    align-self: flex-end; }
+    .headerMusica nav .listaNavMusica li .nav-link {
+      color: black; }
+    .headerMusica nav .listaNavMusica li .nav-link:hover {
+      color: #ffb414; }
+    .headerMusica nav .listaNavMusica ul li {
+      display: block;
+      background-color: #1ed760; }
+    .headerMusica nav .nav-item {
+      border-left: 1px solid black; }
+
+/* FOOTER - IGUAL EN TODAS LAS PAGINAS */
+.listaFooter {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  list-style: none;
+  text-decoration: none; }
+  .listaFooter li i {
+    font-size: 20px;
+    margin-right: 5px; }
+
+/* MAIN INDEX */
+#index {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
+  #index #indexTitulo {
+    height: 250px; }
+    #index #indexTitulo h1, #index #indexTitulo .experienciaCompartida h2, .experienciaCompartida #index #indexTitulo h2, #index #indexTitulo .mainMusica h2, .mainMusica #index #indexTitulo h2, #index #indexTitulo .mainMusica h3, .mainMusica #index #indexTitulo h3 {
+      margin: 70px;
+      height: 40px;
+      text-align: center;
+      display: block;
+      color: #38beea;
+      font-size: 50px;
+      font-weight: bolder;
+      width: 80%; }
+  #index section {
+    height: auto; }
+
+.indexInfo {
+  /* CUADRO CON FOTO MUNDO */
+  padding: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #38beea62; }
+  .indexInfo img {
+    border: 1px solid black; }
+
+#parrafo {
+  /* PARRAFO EN EL BLOQUE AZUL*/
+  background-color: rgba(255, 255, 255, 0.404);
+  width: 50%;
+  font-size: 20px;
+  font-weight: bolder;
+  border: 2px inset white;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  align-self: center; }
+
+/*IMAGENES REDONDAS DE LAS DISTINTAS REGIONES + BUTTON LINKS */
+.indexRegiones {
+  margin: 50px; }
+  .indexRegiones__titulo {
+    font-size: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+    color: #ffb414;
+    font-weight: bolder; }
+  .indexRegiones__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .indexRegiones__lista div {
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .indexRegiones__lista div h3 {
+        text-align: center; }
+      .indexRegiones__lista div img {
+        text-align: center; }
+      .indexRegiones__lista div button {
+        width: 50%;
+        align-self: center; }
+        .indexRegiones__lista div button a {
+          text-decoration: none; }
+      .indexRegiones__lista div button:hover a {
+        color: white; }
+
+/* CUADRO QUIEN SOY (FOTO + TEXTO) */
 .quienSoy {
   border: 1px solid black;
   margin: 40px;
@@ -14,13 +259,62 @@
     flex-direction: row;
     justify-content: center; }
     .quienSoy__fotoTexto__texto {
-      width: 100%;
+      width: auto;
       text-align: center;
       margin: 30px 20px;
       font-weight: bolder; }
-    .quienSoy__fotoTexto__foto {
-      width: 550px;
-      height: 350px; }
+
+/*FORMULARIO*/
+form {
+  padding: 20px 100px;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 20px;
+  background-color: rgba(128, 128, 128, 0.342); }
+  form h3 {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px; }
+  form fieldset div div {
+    margin-top: 20px; }
+  form fieldset #formulario {
+    display: flex;
+    flex-direction: column; }
+  form .boton {
+    margin: 20px 5px; }
+
+/*BOTON INDEX ARRIBA*/
+#arriba {
+  align-self: center; }
+  #arriba button {
+    margin-bottom: 20px;
+    font-size: 25px; }
+
+/* DESTINOS */
+.triple {
+  /*PARRAFO INTRODUCTORIO + MAPA REGION + TITULO (.DESTINOS) */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo  mapa" "parrafo mapa";
+  margin-top: 80px; }
+  .triple img {
+    grid-area: mapa;
+    justify-self: center; }
+  .triple .general {
+    text-align: center;
+    margin: 0px 50px; }
+    .triple .general p {
+      font-size: 20px;
+      grid-area: parrafo; }
+
+.destinos {
+  color: #ffb414;
+  font-family: "Quicksand", sans-serif;
+  font-size: 80px;
+  letter-spacing: 10px;
+  text-align: center;
+  grid-area: titulo; }
 
 .destinoBloques {
   margin: 20px 0px;
@@ -38,51 +332,191 @@
     height: 100%;
     opacity: 0.5; }
 
-.tituloFotoGaleria {
-  margin: 20px 0px;
-  position: relative;
-  overflow: hidden;
-  height: 300px; }
-  .tituloFotoGaleria h1 {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    color: white;
-    font-weight: bolder;
-    font-size: 100px;
-    text-decoration: underline;
-    width: 100%;
-    margin-top: 100px;
+main h2 {
+  /*TITULO CUADROS*/
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-decoration: underline;
+  font-family: "Quicksand", sans-serif; }
+
+ul li {
+  font-family: "Quicksand", sans-serif;
+  list-style-type: none; }
+
+.grillaDestinos {
+  /*CUATRO CUADROS*/
+  height: 700px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: "provincias  ciudades" "clima       actividades";
+  justify-items: center; }
+  .grillaDestinos .provincias, .grillaDestinos .ciudades, .grillaDestinos .clima, .grillaDestinos .actividades {
+    margin: 20px;
+    padding: 20px;
+    border: 1px inset grey;
+    border-radius: 20px;
+    background-color: #ffffffa8;
+    width: 80%;
+    grid-area: provincias; }
+    .grillaDestinos .provincias__lista {
+      padding-left: 0px; }
+  .grillaDestinos .ciudades {
+    grid-area: ciudades; }
+    .grillaDestinos .ciudades__lista {
+      padding-left: 0px; }
+  .grillaDestinos .clima {
+    grid-area: clima; }
+  .grillaDestinos .actividades {
+    grid-area: actividades; }
+    .grillaDestinos .actividades ul {
+      padding-left: 0px; }
+    .grillaDestinos .actividades h3 {
+      font-size: 20px;
+      font-weight: bolder; }
+
+/* GALERIA */
+main .galeria {
+  margin-top: 100px; }
+  main .galeria .galeriaCards {
+    margin: 20px; }
+  main .galeria .tituloFotoGaleria {
+    margin: 20px 0px;
     position: relative;
-    z-index: 2; }
-  .tituloFotoGaleria img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7; }
+    overflow: hidden;
+    height: 300px; }
+    main .galeria .tituloFotoGaleria h1, main .galeria .tituloFotoGaleria .experienciaCompartida h2, .experienciaCompartida main .galeria .tituloFotoGaleria h2, main .galeria .tituloFotoGaleria .mainMusica h2, .mainMusica main .galeria .tituloFotoGaleria h2, main .galeria .tituloFotoGaleria .mainMusica h3, .mainMusica main .galeria .tituloFotoGaleria h3 {
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+      font-size: 100px;
+      text-decoration: underline;
+      width: 100%;
+      margin-top: 100px;
+      position: relative;
+      z-index: 2; }
+    main .galeria .tituloFotoGaleria img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7; }
 
-.experienciaUno__texto, .experienciaDos__texto, .experienciaTres__texto {
-  font-size: 18px;
-  width: 80%;
-  text-align: center; }
+main .videos {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
 
-.experienciaDos__texto {
-  text-align: right; }
+.card-title {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  color: #38beea;
+  font-weight: bolder; }
 
-.experienciaTres__texto {
-  text-align: left; }
+.card {
+  border-radius: 20px;
+  padding: 20px; }
 
-#tituloEncabezado {
-  font-size: 100px;
-  font-weight: ligther;
-  align-self: end;
-  font-family: "Ephesis";
-  color: white; }
+/* EXPERIENCIAS */
+.tituloExperiencia {
+  /* EXPERIENCIAS - TITULO  */
+  color: #38beea;
+  font-family: "Amatic SC", cursive;
+  font-weight: bolder;
+  font-size: 35px;
+  word-spacing: 5px;
+  text-decoration: underline; }
 
-#subtituloEncabezado {
-  font-size: 100px;
-  font-weight: ligther;
-  align-self: end;
-  font-family: "Ephesis";
-  color: white; }
+.experiencias {
+  /* EXPERIENCIAS - BLOQUES  */
+  height: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "bariloche angostura andes";
+  column-gap: 2em;
+  margin: 50px; }
+  .experiencias .experienciaUno, .experiencias .experienciaDos, .experiencias .experienciaTres {
+    grid-area: bariloche;
+    padding: 30px;
+    background-color: #38beea3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .experiencias .experienciaUno__texto, .experiencias .experienciaDos__texto, .experiencias .experienciaTres__texto {
+      text-align: center;
+      font-size: 18px;
+      width: 80%; }
+    .experiencias .experienciaUno__foto {
+      width: 300px;
+      height: 200px; }
+  .experiencias .experienciaDos {
+    grid-area: angostura; }
+  .experiencias .experienciaTres {
+    grid-area: andes; }
+
+/* TRANSITION IMG */
+.experiencias img {
+  transition: all 2s; }
+
+.experiencias img:hover {
+  transform: scale(1.5, 1.5); }
+
+.experienciaCompartida {
+  padding: 50px;
+  margin: 50px;
+  background-color: #38beea27;
+  border: 1px inset #38beea81;
+  border-radius: 40px; }
+  .experienciaCompartida h1, .experienciaCompartida h2, .experienciaCompartida .mainMusica h3, .mainMusica .experienciaCompartida h3 {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    text-decoration: none; }
+  .experienciaCompartida__datos {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+
+/* MUSICA */
+#musica {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 50px; }
+  #musica div {
+    margin-right: 10px; }
+
+.mainMusica {
+  background-image: linear-gradient(#164627, rgba(0, 0, 0, 0.911)); }
+  .mainMusica h1, .mainMusica h2, .mainMusica h3 {
+    color: white;
+    text-decoration: none;
+    height: 100px;
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    word-spacing: 10px; }
+
+/* SITIO EN CONSTRUCCION */
+#bodyConstruccion {
+  background-color: grey; }
+  #bodyConstruccion #construccion {
+    height: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Quicksand', sans-serif; }
+    #bodyConstruccion #construccion div {
+      display: flex;
+      flex-direction: row; }

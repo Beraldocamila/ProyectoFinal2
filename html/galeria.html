@@ -4,46 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="imagenes de los paisajes mas imponentes de la Argentina">
     <meta name="keywords" content="ARGENTINA, NOROESTE, MESOPOTAMIA, PATAGONIA, PROVINCIAS, CIUDADES, ACTIVIDADES, EXPERIENCIAS">
     <meta name="description" content="En esta seccion encontraras imagenes y video de los distintos lugares de la Argentina">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../scss/css/proyecto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Galeria</title>
 </head>
 
 <body>
     <div class="grillaPrincial">
         <!-- HEADER -->
-        <header>
-          <div class="grillasUno">
-              <div id="logo">
-                  <a href="../index.html"><img src="../Imagenes/logo2.png" alt="Logo" width="250" height="270"></a>
-              </div>
-              <h1 id="tituloEncabezado">Por </h1>
-              <h2 id="subtituloEncabezado">Argentina</h2>
-              <!-- <h2 id="subtituloEncabezado">Por Argentina</h2>-->
-          </div>
-          <!-- NAVEGADOR -->
-              <nav class="container-fluid">
-              <ul class="listaNav">
+        <header class="headerDistinto">
+          <a href="../index.html"><img src="../Imagenes/logo2.png" alt="Logo" width="100" height="150"></a>
+          <h1 class="tituloEncabezadoDistinto">Por Argentina</h1>
+          <nav class="container-fluid">
+              <ul class="listaNavDistinta">
                   <li class="nav-item">
                       <a class="nav-link" href="../index.html">INICIO</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="destinos.html">DESTINOS</a>
                       <ul>
-                          <li><a class="nav-link"  href="destinos.html#noroeste">NOROESTE</a></li>
-                          <li><a class="nav-link"  href="destinos.html#mesopotamia">MESOPOTAMIA</a></li>
-                          <li><a class="nav-link"  href="destinos.html#patagonia">PATAGONIA</a></li>
+                          <li><a class="nav-link"  href="../html/destinos.html#noroeste">NOROESTE</a></li>
+                          <li><a class="nav-link"  href="../html/destinos.html#mesopotamia">MESOPOTAMIA</a></li>
+                          <li><a class="nav-link"  href="../html/destinos.html#patagonia">PATAGONIA</a></li>
                       </ul>
                   </li>
                   <li class="nav-item">
@@ -53,71 +45,69 @@
                       <a class="nav-link" href="experiencias.html">EXPERIENCIAS</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="contacto.html">CONTACTO</a>
+                    <a class="nav-link" href="musica.html"><i class="fas fa-music"></i></a>
                   </li>
               </ul>
           </nav>
-      
-
-        </header>
+      </header>
         <!-- MAIN -->
         <main>
-            <article class="galeria"> <!-- NOROESTE -->
-              <!-- TITULO + FOTO -->
-              <div class="tituloFotoGaleria">
-                <h1  data-aos="zoom-in-down">NOROESTE</h1>
-                <img src="../Imagenes/Destinos/Noroeste/jujuyTitulo.png" alt="Jujuy">
-              </div>
-              <!-- CARDS IMAGENES -->
-              <div class="galeriaCards">
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="../Imagenes/Destinos/Noroeste/salinas.png" class="card-img-top" alt="Salinas" width="250" height="200">
-                            <div class="card-body">
-                                <h5 class="card-title">Salinas</h5>
-                            </div>
+          <div class="videos">    
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/ggpgZ9chgnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/qnCIxwrCiYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <article class="galeria"> <!-- NOROESTE -->
+            <!-- TITULO + FOTO -->
+            <div class="tituloFotoGaleria">
+              <h1  data-aos="zoom-in-down">NOROESTE</h1>
+              <img src="../Imagenes/Destinos/Noroeste/jujuyTitulo.png" alt="Jujuy">
+            </div>
+            <!-- CARDS IMAGENES -->
+            <div class="galeriaCards">
+              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="../Imagenes/Destinos/Noroeste/salinas.png" class="card-img-top" alt="Salinas" width="250" height="200">
+                        <div class="card-body">
+                          <h5 class="card-title">Salinas</h5>
                         </div>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="../Imagenes/Destinos/Noroeste/laRioja.png" class="card-img-top" alt="La Rioja" width="250" height="200">
-                        <div class="card-body">
-                          <h5 class="card-title">La Rioja</h5>
-                        </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="../Imagenes/Destinos/Noroeste/laRioja.png" class="card-img-top" alt="La Rioja" width="250" height="200">
+                      <div class="card-body">
+                        <h5 class="card-title">La Rioja</h5>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="../Imagenes/Destinos/Noroeste/salta.png" class="card-img-top" alt="Salta" width="250" height="200">
-                        <div class="card-body">
-                          <h5 class="card-title">Salta</h5>
-                        </div>
-                      </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../Imagenes/Destinos/Noroeste/salta.png" class="card-img-top" alt="Salta" width="250" height="200">
+                    <div class="card-body">
+                      <h5 class="card-title">Salta</h5>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
                         <img src="../Imagenes/Destinos/Noroeste/santiagoDelEstero.png" class="card-img-top" alt="Santiago del Estero" width="250" height="200">
                         <div class="card-body">
                           <h5 class="card-title">Santiago del Estero</h5>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col">
+                  </div>
+                </div>
+                <div class="col">
                         <div class="card h-100">
                           <img src="../Imagenes/Destinos/Noroeste/tucuman.png" class="card-img-top" alt="Tucuman" width="250" height="200">
                           <div class="card-body">
                             <h5 class="card-title">Tucuman</h5>
                           </div>
                         </div>
-                    </div>
+                  </div>
+                  </div>
                 </div>
-              </div>
-              <div class="videos">
-                <iframe width="500" height="350" src="https://www.youtube.com/embed/ggpgZ9chgnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
             </article>
-
             <article class="galeria"> <!-- MESOPOTAMIA -->
               <!-- TITULO + FOTO -->
               <div class="tituloFotoGaleria">
@@ -170,7 +160,6 @@
                 </div>
               </div>
             </article>
-
             <article class="galeria"> <!-- Patagonia -->
               <!-- TITULO + FOTO -->
               <div class="tituloFotoGaleria">
@@ -222,21 +211,19 @@
                     </div>
                 </div>
               </div>
-              <div class="videos">    
-                <iframe width="500" height="350" src="https://www.youtube.com/embed/qnCIxwrCiYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+
             </article>
 
 
         </main>
         <!-- PIE DE PAGINA-->
         <footer>
-            <ul class="listaFooter"> 
-                <li>Mail</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>WhatsApp</li>
-            </ul>
+          <ul class="listaFooter">
+              <li><i class="far fa-envelope"></i> Mail</li>
+              <li><i class="fab fa-instagram"></i> Instagram</li>
+              <li><i class="fab fa-facebook-f"></i> Facebook</li>
+              <li> <i class="fab fa-whatsapp"></i> WhatsApp</li>
+          </ul>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

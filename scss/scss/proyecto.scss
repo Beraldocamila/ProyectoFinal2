@@ -1,5 +1,327 @@
 @import "_variables";
+@import "_tipografias";
+@import "_colores";
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Igual en todas las paginas */
+
+p, h1, h3{
+    font-family: $fuentePrincipal;
+}
+
+.grillaPrincipal{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:"header"
+                        "main"
+                        "footer";
+}
+
+header{
+    grid-area: header;
+    height: 600px;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    background-color: $colorSecundario;
+    height: 50px;
+}
+
+/* HEADER INDEX (LOGO + TITULO + SUBTITULO + NAV */
+
+.grillasUno{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 30% 30% 40%;
+    grid-template-areas:"logo  titulo"
+                        "logo  subtitulo"
+                        "nav   nav";
+    position: relative; 
+    z-index: 2;
+    height: 600px;
+    .container-fluid{
+        grid-area: nav;
+        align-self: end;
+        .listaNav{
+            grid-area: nav;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            height: 50px;
+            height: auto;
+            z-index: 2;
+        }
+    }
+}
+ul{
+    ul{
+    position: absolute;
+    display: none;
+    z-index: 3;
+        li{
+            display: block;
+            background-color: rgba(0, 0, 0, 0.405);
+        }
+    }
+}
+
+ul li:hover ul {
+    display:block;
+}
+
+.nav-link{
+    color: white;
+    font-weight: bolder;
+}
+
+.nav-link:hover{
+    color: rgb(255, 180, 20);
+}
+
+.nav-item{
+    border-left: 1px solid white;
+}
+
+
+#imagenHeader{ /* IMAGEN FONDO HEADER INDEX */
+    overflow:hidden;
+    z-index: 1;
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+}
+
+@mixin titulos($tamanio, $grosor, $alineado, $fuente, $color, $justify, $posicion, $z){
+    font-size: $tamanio;
+    font-weight: $grosor;
+    align-self: $alineado;
+    font-family: $fuente;
+    color: $color;
+    justify-self: $justify;
+    position: $posicion;
+    z-index: $z;
+}
+
+#tituloEncabezado{
+    @include titulos(100px, ligther, end, $fuenteTerciaria, white, start, relative, 2);
+    grid-area: titulo;
+}
+
+#subtituloEncabezado{
+    @include titulos(100px, ligther, start, $fuenteTerciaria, white, start, relative, 2);
+    grid-area: subtitulo;
+    border-top: 2px solid white;
+    letter-spacing: 5px;
+}
+
+#logo{
+    grid-area: logo;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+/* HEADER EN LAS OTRAS PAGINAS (TITULO + SUBTITULO + NAV) - DESTINO / GALERIA / EXPERIENCIAS */
+
+.headerDistinto{
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colorPrincipal;
+
+    .tituloEncabezadoDistinto{
+        width: 40%;
+        margin-left: 60px;
+        font-size: 70px;
+        font-weight: lighter;
+        word-spacing: 10px;
+        font-family: $fuenteTerciaria;
+        color: white;
+    }
+
+    nav{
+        align-self: flex-end;
+        .listaNavDistinta{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            list-style-type: none;
+            text-decoration: none;
+            height: 40px;
+            ul li {
+                display: block;
+                background-color: #38beea;
+            }
+        }
+    }
+
+}
+
+
+/* HEADER EN LAS OTRAS PAGINAS (TITULO + SUBTITULO + NAV) - MUSICA */
+
+.headerMusica{
+    @extend .headerDistinto;
+    background-color: $colorSpotify; 
+
+    .tituloEncabezadoMusica{
+        @extend .tituloEncabezadoDistinto;
+        color: black;
+    }
+    nav{
+        align-self: flex-end;
+        .listaNavMusica{
+            @extend .listaNavDistinta;                
+            li{
+                .nav-link{
+                    color: black;
+                }
+                .nav-link:hover{
+                    color: rgb(255, 180, 20);
+                }
+            }
+            ul li {
+                display: block;
+                background-color: #1ed760;
+                
+            }
+        }
+        .nav-item{
+            border-left: 1px solid black;
+        }
+    }
+}
+
+/* FOOTER - IGUAL EN TODAS LAS PAGINAS */
+
+.listaFooter{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    font-family: $fuentePrincipal;
+    font-weight: bolder;
+    list-style: none;
+    text-decoration: none;
+    li{
+        i{
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+
+/* MAIN INDEX */
+
+#index{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    #indexTitulo{
+        height: 250px;
+        h1{
+        margin: 70px;
+        height: 40px;
+        text-align: $centro;
+        display: block;
+        color: #38beea;
+        font-size: 50px;
+        font-weight: bolder;
+        width: 80%;
+        }   
+    }
+    section{
+        height: auto;
+    }
+}
+
+.indexInfo{ /* CUADRO CON FOTO MUNDO */
+    padding:20px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #38beea62;
+
+    img{
+        border: 1px solid black;
+    }
+}
+
+
+
+#parrafo{ /* PARRAFO EN EL BLOQUE AZUL*/
+    background-color: rgba(255, 255, 255, 0.404);
+    width: 50%;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 2px inset white;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: $centro;
+    align-self: $centro;
+}
+
+/*IMAGENES REDONDAS DE LAS DISTINTAS REGIONES + BUTTON LINKS */
+.indexRegiones{
+    margin: 50px;
+    &__titulo{
+        font-size: 50px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        text-align: $centro;
+        color: rgb(255, 180, 20);
+        font-weight: bolder;
+    }
+    &__lista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+            div{
+                height: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h3{
+                    text-align:  $centro;
+                }
+                img{
+                    text-align:  $centro;
+                }
+                button{
+                    width: 50%;
+                    align-self: $centro;
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                button:hover{
+                    a{
+                    color: white;
+                    }
+                }
+            }
+    }
+}
+
+/* CUADRO QUIEN SOY (FOTO + TEXTO) */
 .quienSoy{
     border: 1px solid black;
     margin: 40px;
@@ -18,17 +340,85 @@
         flex-direction: row;
         justify-content: $centro;
         &__texto{
-            width: 100%;
+            width: auto;
             text-align: $centro;
             margin: 30px 20px;
             font-weight: bolder;
         }
-        &__foto{
-            width: 550px;
-            height: 350px;
-        }
+
     }
 
+}
+/*FORMULARIO*/
+
+form{
+    padding: 20px 100px;
+    font-family: $fuentePrincipal; 
+    margin-bottom: 20px;
+    background-color: rgba(128, 128, 128, 0.342);
+    h3{
+    font-size: 30px;
+    text-align: $centro;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    }
+    fieldset{
+        div{
+            div{
+            margin-top: 20px;
+            }
+        }
+        #formulario{
+            display: flex;
+            flex-direction: column;
+        }
+    } 
+    .boton{
+        margin: 20px 5px;
+    }
+}
+
+/*BOTON INDEX ARRIBA*/
+
+#arriba{
+        align-self: $centro;
+    button{
+    margin-bottom: 20px;
+    font-size: 25px;
+    } 
+}
+
+/* DESTINOS */
+
+
+.triple{ /*PARRAFO INTRODUCTORIO + MAPA REGION + TITULO (.DESTINOS) */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:"titulo  mapa"
+                        "parrafo mapa";
+    margin-top: 80px;
+    img{
+        grid-area: mapa;
+        justify-self: $centro;
+    }
+    .general{
+        text-align: $centro;
+        margin: 0px 50px;
+        p{
+            font-size: 20px;
+            grid-area: parrafo;
+        }
+    }
+}
+
+.destinos{ 
+    color:rgb(255, 180, 20);
+    font-family: $fuentePrincipal;
+    font-size: 80px;
+    letter-spacing: 10px;
+    text-align: $centro;
+    grid-area: titulo;
 }
 
 .destinoBloques{
@@ -52,65 +442,259 @@
     }
 }
 
-.tituloFotoGaleria{
-    margin: 20px 0px;
-    position: relative;
-    overflow: hidden;
-    height: 300px;
+main h2{ /*TITULO CUADROS*/
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    font-family: $fuentePrincipal;
+}
 
-    h1{
-        font-family: 'Quicksand', sans-serif;
-        text-align: $centro;
-        color: white;
-        font-weight: bolder;
-        font-size: 100px;
-        text-decoration: underline;
-        width: 100%;
-        margin-top: 100px;
-        position: relative;
-        z-index: 2;
+ul li{
+    font-family: $fuentePrincipal;
+    list-style-type: none;
+}
+
+.grillaDestinos{ /*CUATRO CUADROS*/
+    height: 700px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:"provincias  ciudades"
+                        "clima       actividades";
+    justify-items: $centro;
+    .provincias{
+        margin: 20px;
+        padding: 20px;
+        border: 1px inset grey;
+        border-radius: 20px;
+        background-color: #ffffffa8;
+        width: 80%;
+        grid-area: provincias;
+        &__lista{
+            padding-left: 0px
+        }
     }
+    .ciudades{
+        @extend .provincias;
+        grid-area: ciudades;
+        &__lista{
+            padding-left: 0px
+        }
+    }
+    .clima{
+        @extend .provincias;
+        grid-area: clima;
+    }
+    .actividades{
+        @extend .provincias;
+        grid-area: actividades;
+        ul{
+                padding-left: 0px
+        }
+        h3{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
+}
 
+/* GALERIA */
+
+main{
+    .galeria{
+        margin-top: 100px;
+        .galeriaCards{
+            margin: 20px;
+        }
+            
+        .tituloFotoGaleria{
+        margin: 20px 0px;
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+            h1{
+                font-family: 'Quicksand', sans-serif;
+                text-align: $centro;
+                color: white;
+                font-weight: bolder;
+                font-size: 100px;
+                text-decoration: underline;
+                width: 100%;
+                margin-top: 100px;
+                position: relative;
+                z-index: 2;
+            }
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.7; 
+                }
+        }
+    }
+    .videos{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.card-title{
+    font-family: $fuentePrincipal;
+    text-align: $centro;
+    color: $colorPrincipal;
+    font-weight: bolder;
+}
+
+.card{
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* EXPERIENCIAS */
+
+
+.tituloExperiencia{ /* EXPERIENCIAS - TITULO  */
+    color: $colorPrincipal;
+    font-family: $fuenteSecundaria;
+    font-weight: bolder;
+    font-size: 35px;
+    word-spacing: 5px;
+    text-decoration: underline;
+}
+
+
+.experiencias { /* EXPERIENCIAS - BLOQUES  */
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "bariloche angostura andes";
+    column-gap: 2em;
+    margin: 50px;
+    .experienciaUno{
+        grid-area: bariloche;
+        padding: 30px;
+        background-color: #38beea3f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__texto{
+            text-align: $centro;
+            font-size: 18px;
+            width: 80%;
+        }
+        &__foto{
+            width: 300px;
+            height: 200px;
+        }
+    }
+    .experienciaDos{
+        @extend .experienciaUno;
+        grid-area: angostura;
+        &__texto{
+            @extend .experienciaUno__texto;
+        }
+    }
+    
+    .experienciaTres{
+        @extend .experienciaUno;
+        grid-area: andes;
+        &__texto{
+            @extend .experienciaUno__texto;
+        }
+    }
+}
+
+/* TRANSITION IMG */
+
+.experiencias{
     img{
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.7; 
+        transition: all 2s;
+    }
+    img:hover{
+        transform: scale(1.5,1.5);
+    }
+}
+
+.experienciaCompartida{
+    padding: 50px;
+    margin: 50px;
+    background-color: #38beea27;
+    border: 1px inset #38beea81;
+    border-radius: 40px;
+    h1{
+        font-family: $fuentePrincipal;
+        text-align: $centro;
+        text-decoration: none;
+    }
+    h2{
+        @extend h1;
+    }
+    &__datos{
+        margin-top: 3em;
+        margin-bottom: 3em;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* MUSICA */
+
+#musica{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 50px;
+    div{
+        margin-right: 10px;
         }
 }
 
-.experienciaUno__texto{
-        font-size: 18px;
-        width: 80%;
-        text-align: $centro;
+
+.mainMusica{
+    background-image: linear-gradient(#164627, rgba(0, 0, 0, 0.911));
+    h1{
+    color: white;
+    text-decoration: none;
+    height: 100px;
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    word-spacing: 10px;
+    }
+    h2{
+        @extend h1;
+    }
+    h3{
+        @extend h1;
+    }
 }
 
+  /* SITIO EN CONSTRUCCION */
 
-
-.experienciaDos__texto{
-    @extend .experienciaUno__texto;
-    text-align: right;
-}
-
-.experienciaTres__texto{
-    @extend .experienciaUno__texto;
-    text-align: left;
-}
-
-@mixin titulos($tamanio, $grosor, $alineado, $fuente, $color){
-    font-size: $tamanio;
-    font-weight: $grosor;
-    align-self: $alineado;
-    font-family: $fuente;
-    color: $color;
-}
-
-#tituloEncabezado{
-    @include titulos(100px, ligther, end, 'Ephesis', white)
-}
-
-#subtituloEncabezado{
-    @include titulos(100px, ligther, end, 'Ephesis', white)
+#bodyConstruccion{
+    background-color: grey;
+    
+    #construccion{
+        height: 40em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-family: 'Quicksand', sans-serif;
+        div{
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }

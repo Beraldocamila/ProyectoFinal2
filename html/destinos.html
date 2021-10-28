@@ -4,44 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Podras ver las provincias y ciudades de las distintas regiones de Argentina, y actividades para realizar alli">
     <meta name="keywords" content="ARGENTINA, NOROESTE, MESOPOTAMIA, PATAGONIA, PROVINCIAS, CIUDADES, ACTIVIDADES, EXPERIENCIAS">
     <meta name="description" content="En esta seccion encontraras informacion sobre las distintas regiones de argentina, sus provincias, ciudades y actividades">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../scss/css/proyecto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/css/proyecto.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Destinos</title>
 </head>
 <body>
     <div class="grillaPrincipal">
-        <header>
-            <div class="grillasUno">
-                <div id="logo">
-                    <a href="../index.html"><img src="../Imagenes/logo2.png" alt="Logo" width="250" height="270"></a>
-                </div>
-                <h1 id="tituloEncabezado">Por </h1>
-                <h2 id="subtituloEncabezado">Argentina</h2>
-                <!-- <h2 id="subtituloEncabezado">Por Argentina</h2>-->
-            </div>
-            <!-- NAVEGADOR -->
-                <nav class="container-fluid">
-                <ul class="listaNav">
+        <header class="headerDistinto">
+            <a href="../index.html"><img src="../Imagenes/logo2.png" alt="Logo" width="100" height="150"></a>
+            <h1 class="tituloEncabezadoDistinto">Por Argentina</h1>
+            <nav class="container-fluid">
+                <ul class="listaNavDistinta">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="destinos.html">DESTINOS</a>
                         <ul>
-                            <li><a class="nav-link"  href="destinos.html#noroeste">NOROESTE</a></li>
-                            <li><a class="nav-link"  href="destinos.html#mesopotamia">MESOPOTAMIA</a></li>
-                            <li><a class="nav-link"  href="destinos.html#patagonia">PATAGONIA</a></li>
+                            <li><a class="nav-link"  href="../html/destinos.html#noroeste">NOROESTE</a></li>
+                            <li><a class="nav-link"  href="../html/destinos.html#mesopotamia">MESOPOTAMIA</a></li>
+                            <li><a class="nav-link"  href="../html/destinos.html#patagonia">PATAGONIA</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -51,38 +43,39 @@
                         <a class="nav-link" href="experiencias.html">EXPERIENCIAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">CONTACTO</a>
+                        <a class="nav-link" href="musica.html"><i class="fas fa-music"></i></a>
                     </li>
                 </ul>
             </nav>
-        
-
-    </header>
+        </header>
         <!-- MAIN -->
         <main>
             <!-- NOROESTE -->
+            <!-- NOROESTE TITULO, INTRODUCCION Y MAPA-->
+            <div class="triple">
+                <div id="noroeste">
+                    <div>
+                        <h1 data-aos="flip-left"  class="destinos">NOROESTE</h1>
+                    </div>
+                </div>
+                <div class="general">
+                    <p>Se trata de uno de los destinos turísticos más elegidos por argentinos y extranjeros para vacacionar en verano e invierno. Sus increíbles paisajes y la mística de sus tradiciones y costumbres autóctonas convierten a esta región en un sitio único para conocer. Los trayectos ideales entre varias provincias que no pueden faltar para un recorrido completo</p>
+                    <p>Con sólo mirar el horizonte y apreciar sus variados colores, ya se invita al viajero a sumergirse en sus costumbres y tradiciones; y acariciar su espíritu que propone disfrutar de la tranquilidad y también animarse a la aventura. </p>
+                    <p>Cuenta con unos 300.000 kilómetros cuadrados con bruscas transiciones climáticas y paisajísticas: la Puna (Jujuy) desciende desde sus 4000 metros hasta las llanuras Chaco salteñas.</p>
+                </div>
+                <img data-aos="fade-left" src="../Imagenes/NOA.png" alt="MapaNOA" width="250" height="450">
+            </div>
+
             <div class="destinoBloques">
                 <!-- NOROESTE FOTO FONDO-->
                 <div class="destinoBloques__foto">
-                    <img src="../Imagenes/Destinos/Noroeste/jujuy.png" alt="jujuyFondo">
+                    <img src="../Imagenes/norte.png" alt="jujuyFondo">
                 </div>
                 <!-- NOROESTE CONTENIDO-->
                 <div class="destinoBloques__contenido">
-                    <!-- NOROESTE TITULO-->
-                    <div id="noroeste">
-                        <div>
-                            <h1 data-aos="flip-right"  class="destinos">NOROESTE</h1>
-                        </div>
-                    </div>
                     <!-- NOROESTE CUADROS-->
                     <div class="grillaDestinos">
-                        <div class="general">
-                            <h2 class="general__titulo">General</h2>
-                            <p>Se trata de uno de los destinos turísticos más elegidos por argentinos y extranjeros para vacacionar en verano e invierno. Sus increíbles paisajes y la mística de sus tradiciones y costumbres autóctonas convierten a esta región en un sitio único para conocer. Los trayectos ideales entre varias provincias que no pueden faltar para un recorrido completo</p>
-                            <p>Con sólo mirar el horizonte y apreciar sus variados colores, ya se invita al viajero a sumergirse en sus costumbres y tradiciones; y acariciar su espíritu que propone disfrutar de la tranquilidad y también animarse a la aventura. </p>
-                            <p>Cuenta con unos 300.000 kilómetros cuadrados con bruscas transiciones climáticas y paisajísticas: la Puna (Jujuy) desciende desde sus 4000 metros hasta las llanuras Chaco salteñas.</p>
-                        </div>
-                        <div class="provincias">
+                        <div data-aos="zoom-in-up" class="provincias">
                             <h2 class="provincias__titulo">Provincias</h2>
                             <ul class="provincias__lista"> 
                                 <li>Jujuy</li>
@@ -93,22 +86,34 @@
                                 <li>Santiago del Estero</li>
                             </ul>
                         </div>
-                        <div class="ciudades">
-                            <h2 class="ciudades__titulo">Principales Ciudades</h2>
+                        <div data-aos="zoom-in-up" class="ciudades">
+                            <h2 class="ciudades__titulo">Ciudades Principales</h2>
                             <ul class="ciudades__lista">
                                 <li>San Salvador de Jujuy</li>
-                                <li>La Quiaca (Jujuy)</li>
-                                <li>Humahuaca (Jujuy)</li>
-                                <li>Salta</li>
-                                <li>Tartagal (Salta)</li>
-                                <li>Tafi del Valle (Tucumán)</li>
+                                <li>Purmamarca - Jujuy</li>
+                                <li>La Quiaca - Jujuy</li>
+                                <li>Humahuaca - Jujuy</li>
+                                <li>Tilcara - Jujuy</li>
+                                <li>Tartagal - Salta</li>
+                                <li>Cafayate - Salta</li>
+                                <li>Tafi del Valle - Tucumán</li>
                             </ul>
                         </div>
-                        <div class="actividades">
-                            <h2>Actividades</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, autem!</p>
+                        <div data-aos="zoom-in-up" class="actividades">
+                            <h2 >Actividades</h2>
+                            <ul>
+                                <li><i class="fas fa-caret-right"></i> Cerro de los siete colores - Jujuy</li>
+                                <li><i class="fas fa-caret-right"></i> Salinas Grandes - Jujuy</li>
+                                <li><i class="fas fa-caret-right"></i> Catedral de Salta - Salta</li>
+                                <li><i class="fas fa-caret-right"></i> Quebrada de las Conchas - Salta</li>
+                                <li><i class="fas fa-caret-right"></i> Tren de las Nubes - Salta</li>
+                                <li><i class="fas fa-caret-right"></i> Casa histórica de Tucumán -Tucumán</li>
+                                <li><i class="fas fa-caret-right"></i> Crater del Inca - La Rioja</li>
+                                <li><i class="fas fa-caret-right"></i> Dique Los Sauces - La Rioja</li>
+                                <li><i class="fas fa-caret-right"></i> Termas de Fiambala - Catamarca</li>
+                            </ul>
                         </div>
-                        <div class="clima">
+                        <div data-aos="zoom-in-up" class="clima">
                             <h2>Clima</h2>
                             <p>Subtropical, seco y calido</p>
                             <p>La mejor época para ir es en otoño y primavera, sobre todo en los meses de mayo, junio, noviembre y diciembre. En estos meses, el clima durante el día es muy agradable y por las noches refresca un poco</p>
@@ -119,29 +124,29 @@
             </div>
 
             <!-- MESOPOTAMIA -->
+            <!-- MESOPOTAMIA ITULO, INTRODUCCION Y MAPA-->
+            <div class="triple">
+                <div id="mesopotamia"> 
+                    <div>
+                        <h1 data-aos="flip-left" class="destinos">MESOPOTAMIA</h1>
+                    </div>
+                </div>
+                <div class="general">
+                    <p>La mesopotamia argentina limita al norte con el río Iguazú, al sur con el Paraná que desemboca en forma de Delta en el Rio de la Plata, al este con el río Uruguay (frontera de Argentina con Brasil y Uruguay) y al oeste con el Paraná.</p>
+                    <p>Visitarla es encontrarse con el esplendor de la vegetación y una sucesión de ríos, bañados, selvas y bosques que invitan a disfrutar de caminatas y deportes fluviales, a pescar dorados o surubíes y a hacer excursiones en lanchas, veleros o piraguas, entre las islas.</p>
+                    </div>
+                <img data-aos="fade-left" src="../Imagenes/MESOPOT.png" alt="MapaMESOP" width="250" height="450">
+            </div>
             <div class="destinoBloques">
                 <!-- MESOPOTAMIA FOTO FONDO-->
                 <div class="destinoBloques__foto">
-                    <img src="../Imagenes/Destinos/Mesopotamia/corrientes.png" alt="corrientesFondo" height="800">
+                    <img src="../Imagenes/mesopotamia.png" alt="iguazuFondo" height="800">
                 </div>
                 <!-- MESOPOTAMIA CONTENIDO-->
                 <div class="destinoBloques__contenido">
-                    <!-- MESOPOTAMIA TITULO-->
-                    <div id="mesopotamia"> 
-                        <div>
-                            <h1 data-aos="flip-right"  class="destinos">MESOPOTAMIA</h1>
-                        </div>
-                    </div>
                     <!-- MESOPOTAMIA CUADROS-->
                     <div class="grillaDestinos">
-                        <div class="general">
-                            <h2 class="general__titulo">General</h2>
-                            <p>Visitar la Mesopotamia argentina es encontrarse con el esplendor de la vegetación y una sucesión de ríos, bañados, selvas y bosques que invitan a disfrutar de caminatas y deportes fluviales, a pescar dorados o surubíes y a hacer excursiones en lanchas, veleros o piraguas, entre las islas.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consectetur. Sunt labore tempora vel voluptatibus quasi esse laborum alias, quibusdam, velit totam, natus odit aut illum amet officia sint eum.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt officia rerum cumque iure saepe fuga, voluptatem modi sint eius dicta ipsa quo! Totam sapiente, magni ut sit vero voluptatibus.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptatem nostrum rem, nobis ipsum est facere reiciendis labore rerum, consequuntur neque beatae animi voluptatum! Similique consequatur beatae ut laboriosam magnam!</p>
-                        </div>
-                        <div class="provincias">
+                        <div data-aos="zoom-in-up" class="provincias">
                             <h2 class="provincias__titulo">Provincias</h2>
                             <ul class="provincias__lista">
                                 <li>Corrientes</li>
@@ -149,22 +154,35 @@
                                 <li>Misiones</li>
                             </ul>
                         </div>
-                        <div class="ciudades">
-                            <h2>Principales Ciudades</h2>
+                        <div data-aos="zoom-in-up" class="ciudades">
+                            <h2>Ciudades Principales</h2>
                             <ul class="ciudades__lista">
-                                <li>Mercedes (Corrientes)</li>
-                                <li>Parana (Entre Rios)</li>
-                                <li>Gualeguaychu (Entre Rios)</li>
-                                <li>Puerto Iguazu (Misiones)</li>
+                                <li>Mercedes - Corrientes</li>
+                                <li>Paraná - Entre Rios</li>
+                                <li>Gualeguaychu - Entre Rios</li>
+                                <li>Colón - Entre Rios</li>
+                                <li>La Paz - Entre Rios</li>
+                                <li>Posadas - Misiones</li>
+                                <li>Puerto Iguazu - Misiones</li>
                             </ul>
                         </div>
-                        <div class="actividades">
+                        <div data-aos="zoom-in-up" class="actividades">
                             <h2>Actividades</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptatum?</p>
+                            <ul>
+                                <li><i class="fas fa-caret-right"></i> Esteros del Iberá - Corrientes</li>
+                                <li><i class="fas fa-caret-right"></i> Parque Nacional Mburucuyá - Corrientes</li>
+                                <li><i class="fas fa-caret-right"></i> Puente General Manuel Belgrano - Corrientes</li>
+                                <li><i class="fas fa-caret-right"></i> Parque Nacional El Palmar - Entre Rios</li>
+                                <li><i class="fas fa-caret-right"></i> Termas de Federación - Entre Rios</li>
+                                <li><i class="fas fa-caret-right"></i> Cataratas del Iguazú - Misiones</li>
+                                <li><i class="fas fa-caret-right"></i> Güiráoga - Misiones</li>
+                                <li><i class="fas fa-caret-right"></i> Los saltos del Mocona - Misiones</li>
+                            </ul>
                         </div>
-                        <div class="clima">
+                        <div data-aos="zoom-in-up" class="clima">
                             <h2>Clima</h2>
-                            <p>Subtropical durante todo el año. Veranos cálidos y húmedos. Inviernos templados y secos</p>
+                            <p>Puede clasificarse del tipo tropical sin estación seca, debido a su cercanía al Trópico de Capricornio le correspondería un clima más cálido, pero debido a la influencia de los vientos provenientes del Atlántico, las selvas y las frecuentes lluvias, el clima resulta tropical.</p>
+                            <p>En dirección al norte el clima es húmedo y caluroso, la zona correntina tiene clima tropical con lluvias decrecientes del nordeste al sur, que se distribuyen de manera homogénea a lo largo del año, siendo muy persiste en el norte de Entre Ríos y se vuelve más templado hacia el sur de la provincia.</p>
                         </div>
                     </div>
                 </div>
@@ -172,6 +190,20 @@
 
 
             <!-- PATAGONIA -->
+            <!-- PATAGONIA ITULO, INTRODUCCION Y MAPA-->
+            <div class="triple">
+                <div  id="patagonia">
+                    <div> 
+                        <h1 data-aos="flip-left" class="destinos">PATAGONIA</h1>
+                    </div>
+                </div>
+                <div class="general">
+                    <p>Es uno de los puntos turísticos más visitado de argentina, tanto por nativos como por extranjeros, por sus nutridos paisajes y ciudades ubicadas al pie de la Cordillera de los Andes y en sus preciosas costas.</p>
+                    <p>El cordón de la Cordillera de los Andes, se impone de norte a sur como uno de sus límites naturales y abre escenarios impactantes. Cumbres de volcanes con géiseres y aguas termales; montañas de donde descienden enormes glaciares, lagos y ríos.  Encantadores valles y aldeas de montaña rodeadas de bosques autóctonos milenarios, o extensos campos de estepa.</p>
+                    <p>Tambien, sorprende con su biodiversidad y su fauna silvestre no menos increíble. Desde maras, ñandúes, guanacos y el ciervo colorado hasta el cóndor sobrevolando desde los andes a las sierras junto al mar.  También es hábitat de un rico mundo marino, donde numerosas especies forman colonias de lobos y elefantes marinos, pingüinos magallánicos, delfines, toninas, y otras que arriban por temporada donde se destaca la Ballena Franca Austral.</p>
+                </div>
+                <img data-aos="fade-left" src="../Imagenes/PATAGONIA.png" alt="MapaNOA" width="250" height="450">
+            </div>
             <div class="destinoBloques">
                 <!-- PATAGONIA FOTO FONDO-->
                 <div class="destinoBloques__foto"> 
@@ -179,22 +211,11 @@
                 </div>
                 <!-- PATAGONIA CONTENIDO-->
                 <div class="destinoBloques__contenido">
-                    <!-- PATAGONIA TITULO-->
-                    <div  id="patagonia">
-                        <div> 
-                            <h1 data-aos="flip-right"  class="destinos">PATAGONIA</h1>
-                        </div>
-                    </div>
+
                     <!-- PATAGONIA CUADROS-->
                     <div class="grillaDestinos">
-                        <div class="general">
-                            <h2 class="general__titulo">General</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, deleniti. Enim nostrum ut provident voluptatum, perferendis architecto dolor cumque ducimus aspernatur sed reiciendis, dolorum harum ab recusandae? Quibusdam, explicabo harum.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consectetur. Sunt labore tempora vel voluptatibus quasi esse laborum alias, quibusdam, velit totam, natus odit aut illum amet officia sint eum.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus deserunt officia rerum cumque iure saepe fuga, voluptatem modi sint eius dicta ipsa quo! Totam sapiente, magni ut sit vero voluptatibus.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptatem nostrum rem, nobis ipsum est facere reiciendis labore rerum, consequuntur neque beatae animi voluptatum! Similique consequatur beatae ut laboriosam magnam!</p>
-                        </div>
-                        <div class="provincias">
+
+                        <div data-aos="zoom-in-up" class="provincias">
                             <h2 class="provincias__titulo">Provincias</h2>
                             <ul class="provincias__lista">
                                 <li>La pampa</li>
@@ -205,23 +226,41 @@
                                 <li>Tierra del Fuego</li>
                             </ul>
                         </div>
-                        <div class="ciudades">
-                            <h2>Principales Ciudades</h2>
+                        <div data-aos="zoom-in-up" class="ciudades">
+                            <h2>Ciudades Principales</h2>
                             <ul class="ciudades__lista">
-                                <li>San Carlos de Bariloche</li>
-                                <li>Villa La Angostura</li>
-                                <li>El Bolson</li>
-                                <li>San Martín de los Andes</li>
-                                <li>El Calafate</li>
+                                <li>Santa Rosa - La Pampa</li>
+                                <li>Villa Traful - Neuquén</li>
+                                <li>Villa La Angostura - Neuquén</li>
+                                <li>San Martín de los Andes - Neuquén </li>
+                                <li>Puerto Madryn - Chubut </li>
+                                <li>San Carlos de Bariloche - Rio Negro</li>
+                                <li>Las Grutas - Rio Negro</li>
+                                <li>El Bolson - Rio Negro</li>
+                                <li>El Calafate - Santa Cruz</li>
+                                <li>El Chalten - Santa Cruz</li>
+                                <li>Ushuaia - Tierra del Fuego</li>
                             </ul>
                         </div>
-                        <div class="actividades">
+                        <div data-aos="zoom-in-up" class="actividades">
                             <h2>Actividades</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, recusandae.</p>
+                            <ul>
+                                <li><i class="fas fa-caret-right"></i> La Ruta de los 7 Lagos - Neuquén</li>
+                                <li><i class="fas fa-caret-right"></i> Lago Huechulafquen - Neuquén</li>
+                                <li><i class="fas fa-caret-right"></i> Cerro Catedral - Bariloche - Rio Negro</li>
+                                <li><i class="fas fa-caret-right"></i> Cerro Tronador - Bariloche - Rio Negro</li>
+                                <li><i class="fas fa-caret-right"></i> Cerro Otto - Bariloche - Rio Negro</li>
+                                <li><i class="fas fa-caret-right"></i> Circuito Chico- Bariloche - Rio Negro</li>
+                                <li><i class="fas fa-caret-right"></i> Colonia Suiza - Bariloche - Rio Negro</li>
+                                <li><i class="fas fa-caret-right"></i> Cerro Fitz Roy - Santa Cruz</li>
+                                <li><i class="fas fa-caret-right"></i> Glaciar Perito Moreno - Calafate - Santa Cruz</li>
+                                <li><i class="fas fa-caret-right"></i> Parque Nacional Tierra del Fuego</li>
+                                <li><i class="fas fa-caret-right"></i> Canal de Beagle - Tierra del Fuego</li>
+                            </ul>
                         </div>
-                        <div class="clima">
+                        <div data-aos="zoom-in-up" class="clima">
                             <h2>Clima</h2>
-                            <p>Templado a frio</p>
+                            <p>El clima de la Patagonia es templado-frío con las temperaturas que disminuyen a medida que la latitud sur aumenta. La Patagonia occidental es húmeda y lluviosa con un clima oceánico frío, salvo en algunos sectores orientales que es semiárida, mientras que la Patagonia oriental es semiárida, con el régimen de precipitaciones que disminuye de oeste a este, y que aumenta ligeramente en las cercanías de la costa atlántica.</p>
                         </div>
                     </div>
                 </div>
@@ -230,10 +269,10 @@
         <!-- PIE DE PAGINA-->
         <footer>
             <ul class="listaFooter">
-                <li>Mail</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>WhatsApp</li>
+                <li><i class="far fa-envelope"></i> Mail</li>
+                <li><i class="fab fa-instagram"></i> Instagram</li>
+                <li><i class="fab fa-facebook-f"></i> Facebook</li>
+                <li> <i class="fab fa-whatsapp"></i> WhatsApp</li>
             </ul>
         </footer>
     </div>
